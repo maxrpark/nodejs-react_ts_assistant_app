@@ -24,7 +24,7 @@ const useTodoReducer = (state: InitialState, action: Actions): InitialState => {
     case actionType.ADD_ITEM:
       return {
         ...state,
-        todo: [...state.todo, action.payload],
+        todo: [action.payload, ...state.todo],
         isEditing: false,
         ItemID: "",
         ItemValue: "",
